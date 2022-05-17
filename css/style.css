@@ -49,6 +49,10 @@ a
     color: inherit;
 }
 
+.cards h4{
+    font-size: 13px;
+}
+
 /* MAIN */
 main
 {
@@ -235,7 +239,7 @@ a>span
     padding-top: 100px;
 
     /* test */
-    background-color: lightsalmon;
+    background-color: #141922;
 }
 
 /* categories */
@@ -251,6 +255,13 @@ a>span
     padding-right: 15px;
     padding-bottom: 1.5rem;
     text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.categories-menu li:hover
+{
+    opacity: 1;
 }
 
 .border-bottom
@@ -275,17 +286,65 @@ a>span
 .col
 {
     width: calc( ( 100% / 6 ) - 10px);
-
-    /* test */
-    border: 1px solid blue;
 }
 
 .recent .cards
 {
     margin-bottom: 1.5rem;
+}
 
-    /* test */
-    background-color: lightsteelblue;
+.card-text
+{
+    text-align: center;
+}
+
+
+/* created for */
+.created-for p
+{
+    padding-top: 5px;
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+.created
+{
+    display: flex;
+}
+
+.created .col
+{
+    padding-top: 1.2rem;
+    padding-right: 12px;
+}
+
+/* most popular artists*/
+.most-popular-artists
+{
+    padding-top: 1.2rem;
+}
+
+.most-popular-artists p
+{
+    padding-top: 5px;
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+.artists
+{
+    display: flex;
+}
+
+.artists .col
+{
+    padding-top: 1.2rem;
+    padding-right: 12px;
+}
+
+.artists .cards img
+{
+    border-radius: 50%;
 }
 
 
@@ -350,14 +409,14 @@ footer
     {
         justify-content: flex-start;
         flex-wrap: wrap;
-        margin-left: -1rem;
-        margin-right: -1rem;
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
     }
 
     .col
     {
         width: calc( 100% / 4 );
-        padding: 0 1rem;
+        padding: 0 0.5rem;
     }
 
    
@@ -405,6 +464,13 @@ footer
     .home
     {
         border-left: none;
+    }
+
+
+    /* categories */
+    .categories-menu li
+    {
+        padding-right: 28px;
     }
 
     /* user info */
