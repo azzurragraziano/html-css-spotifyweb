@@ -18,30 +18,30 @@
         <!-- MAIN -->
         <main>
             <!-- left nav -->
-            <div class="left-nav">
+            <div id="normal" class="left-nav">
                
-                <ul>
-                    <li id="logo">
+                <ul class="nav-links">
+                    <li class="logo">
                         <a href="#">
                             <img src="img/logo.svg" alt="logo">
                         </a>
                     </li>
 
-                    <li id="home">
+                    <li class="home">
                         <a href="#">
                             <img src="img/home.svg" alt="home">
                             <span>Home</span>
                         </a>
                     </li>
 
-                    <li id="search">
+                    <li class="search">
                         <a href="#">
                             <img src="img/search.svg" alt="search">
                             <span>Cerca</span>
                         </a>
                     </li>
 
-                    <li id="library">
+                    <li class="library">
                         <a href="#">
                             <img src="img/libreria.svg" alt="library">
                             <span>La tua libreria</span>
@@ -49,79 +49,209 @@
                     </li>
                 </ul>
 
+                <!-- playlist area -->
+                <div class="playlist-area">
+                    <h3>PLAYLISTS</h3>
+                    <div class="playlist">
+                        <span class="crea-playlist">
+                            +
+                        </span>
+                        Crea Playlist
+                    </div>
+
+                    <ul class="playlist-list">
+                        <li>Playlist</li>
+                        <li>Playlist</li>
+                        <li>Playlist</li>
+                        <li>Playlist</li>
+                        <li>Playlist</li>
+                        <li>Playlist</li>
+                        <li>Playlist</li>
+                    </ul>
+                </div>
+
+                <!-- user info -->
+                <div class="user-info">
+                    <div class="download">
+                        <span class="download-img">
+                            <img src="img/download.svg" alt="">
+                        </span>
+                       <span class="download-app">
+                            Installa app
+                       </span>
+                    </div>
+                    <div class="user">
+                        <span class="user-icon">
+                            <img src="img/profile.svg" alt="">
+                        </span>
+                        <span class="user-name">
+                            John Doe
+                        </span>
+                    </div>
+                </div>
+
             </div>
+
+            <!-- left nav in xs -->
+            <div id="xs" class="left-nav">
+               
+                <ul class="nav-links">
+                    <li class="logo">
+                        <a href="#">
+                            <img src="img/logo-small.svg" alt="logo">
+                        </a>
+                    </li>
+    
+                    <li class="home">
+                        <a href="#">
+                            <img src="img/home.svg" alt="home">
+                        </a>
+                    </li>
+    
+                    <li class="search">
+                        <a href="#">
+                            <img src="img/search.svg" alt="search">
+                        </a>
+                    </li>
+    
+                    <li class="library">
+                        <a href="#">
+                            <img src="img/libreria.svg" alt="library">
+                        </a>
+                    </li>
+                </ul>
+    
+                <div class="user-info">
+                    <div>
+                        <span class="download-img">
+                            <img src="img/download.svg" alt="">
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="user-icon">
+                            <img src="img/profile.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+
+
+            </div>
+            
 
             <!-- main content -->
             <div class="main-content">
                 
-                <!-- categories -->
-               <section class="categories">
-                   <div class="container">
-                    <ul class="categories-menu">
-                        <li>
-                            <a href="#">in evidenza</a>
-                            <div class="border-bottom"></div>
-                        </li>
- 
-                        <li>
-                             <a href="#">podcast</a>
-                        </li>
- 
-                        <li>
-                            <a href="#">classifiche</a>
-                        </li>
- 
-                        <li>
-                            <a href="#">generi e mood</a>
-                        </li>
- 
-                        <li>
-                            <a href="#">nuove uscite</a>
-                        </li>
- 
-                        <li>
-                            <a href="#">scopri</a>
-                        </li>
-                    </ul>
+                <div class="overflow">
 
-                   </div>
-               </section>
+                    <!-- categories -->
+                    <section class="categories">
+                        <div class="container">
+                            
+                            <ul class="categories-menu">
+                                <li>
+                                    <a href="#">in evidenza</a>
+                                    <div class="border-bottom"></div>
+                                </li>
 
-               <!-- recently played -->
-               <section class="recently-played">
-                    <div class="container">
+                                <li>
+                                    <a href="#">podcast</a>
+                                </li>
 
-                        <h2>Recently played</h2>
+                                <li>
+                                    <a href="#">classifiche</a>
+                                </li>
 
-                        <div class="recent">
+                                <li>
+                                    <a href="#">generi e mood</a>
+                                </li>
 
-                            <div class="col">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsa, quis harum nam dolore eligendi nesciunt sit enim nemo unde labore quae inventore. Error ut laboriosam distinctio et, ab voluptatem.
-                            </div>
-    
-                            <div class="col">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsa, quis harum nam dolore eligendi nesciunt sit enim nemo unde labore quae inventore. Error ut laboriosam distinctio et, ab voluptatem.
-                            </div>
-    
-                            <div class="col">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsa, quis harum nam dolore eligendi nesciunt sit enim nemo unde labore quae inventore. Error ut laboriosam distinctio et, ab voluptatem.
-                            </div>
-    
-                            <div class="col">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsa, quis harum nam dolore eligendi nesciunt sit enim nemo unde labore quae inventore. Error ut laboriosam distinctio et, ab voluptatem.
-                            </div>
-    
-                            <div class="col">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsa, quis harum nam dolore eligendi nesciunt sit enim nemo unde labore quae inventore. Error ut laboriosam distinctio et, ab voluptatem.
-                            </div>
-    
-                            <div class="col">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsa, quis harum nam dolore eligendi nesciunt sit enim nemo unde labore quae inventore. Error ut laboriosam distinctio et, ab voluptatem.
-                            </div>
-    
+                                <li>
+                                    <a href="#">nuove uscite</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">scopri</a>
+                                </li>
+                            </ul>
+
                         </div>
-                   </div>
-               </section>
+                    </section>
+
+                    <!-- recently played -->
+                    <section class="recently-played">
+                        <div class="container">
+
+                            <h2>Recently played</h2>
+
+                            <div class="recent">
+
+                                <!-- first col -->
+                                <div class="col">
+                                    <div class="cards">
+
+                                        <!-- image section -->
+                                        <img src="img/metal_lifting.jpg" alt="metal lifting">
+                                        <!-- text section -->
+                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae veritatis a voluptates fuga eaque, voluptatibus veniam nesciunt nostrum quisquam.</h4>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="cards">
+
+                                        <!-- image section -->
+                                        <img src="img/stranger.jpeg" alt="stranger">
+                                        <!-- text section -->
+                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae veritatis a voluptates fuga eaque, voluptatibus veniam nesciunt nostrum quisquam.</h4>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="cards">
+
+                                        <!-- image section -->
+                                        <img src="img/aquietplace.jpeg" alt="a quiet place">
+                                        <!-- text section -->
+                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae veritatis a voluptates fuga eaque, voluptatibus veniam nesciunt nostrum quisquam.</h4>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="cards">
+
+                                        <!-- image section -->
+                                        <img src="img/split.jpeg" alt="split">
+                                        <!-- text section -->
+                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae veritatis a voluptates fuga eaque, voluptatibus veniam nesciunt nostrum quisquam.</h4>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="cards">
+
+                                        <!-- image section -->
+                                        <img src="img/cure.jpeg" alt="a cure for wellness">
+                                        <!-- text section -->
+                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae veritatis a voluptates fuga eaque, voluptatibus veniam nesciunt nostrum quisquam.</h4>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="cards">
+
+                                        <!-- image section -->
+                                        <img src="img/sinister.jpeg" alt="sinister">
+                                        <!-- text section -->
+                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae veritatis a voluptates fuga eaque, voluptatibus veniam nesciunt nostrum quisquam.</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
             </div>
         </main>
     

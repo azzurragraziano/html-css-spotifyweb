@@ -6,17 +6,26 @@
     box-sizing: border-box;
 }
 
+/*********************
+    DESKTOP FIRST
+*********************/
+
 /* COMMON */
 body
 {
     font-family: 'Montserrat', sans-serif;
-    /* color: white; */
+    color: white;
 }
 
 .container
 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+}
+
+img
+{
+    width: 100%;
 }
 
 .app-wrapper
@@ -26,6 +35,7 @@ body
 
     /* test */
     background-color: pink;
+    min-width: 550px;
 }
 
 ul
@@ -53,30 +63,53 @@ main
 /* left nav */
 .left-nav
 {
-    width: 250px;
+    width: 200px;
     overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
 
     /* test */
-    background-color: bisque;
+    background-color: black;
     font-size: 0.8rem;
 }
 
-#logo img
+/* nav links */
+#normal
 {
-    width: 140px;
-    padding: 0.8rem 0 0 0.8rem;
+    display: block;
 }
 
-#home
+#xs
+{
+    display: none;
+}
+
+.home
 {
     border-left: 3px solid green;
 }
 
-li a>img
+.nav-links li img
 {
     width: 2.5rem;
     padding: 0.8rem 0 0 0.8rem;
     vertical-align: middle;
+}
+
+.nav-links .logo img
+{
+    width: 140px;
+    padding-bottom: 1.5rem;
+}
+
+.nav-links li:not(.logo)
+{
+    opacity: 0.5;
+}
+
+.nav-links li:hover
+{
+    opacity: 1;
 }
 
 a>span
@@ -86,11 +119,119 @@ a>span
     padding-top: 15px;
 }
 
+/* playlist area */
+.playlist-area
+{
+    flex-grow: 1;
+    padding: 0.8rem 0 0 0.8rem;
+    line-height: 25px;
+}
+
+.playlist
+{
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.playlist:hover
+{
+    opacity: 1;
+}
+
+.crea-playlist
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: #a3a3a3;
+    font-size: 20px;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+.playlist-list
+{
+    height: 50%;
+    overflow-y: auto;
+}
+
+.playlist-list li
+{
+    color: #a3a3a3;
+}
+
+.playlist-list li:hover
+{
+    color: white;
+    cursor: pointer;
+}
+
+/* user info */
+.user-info
+{
+    line-height: 25px;
+    padding: 0.8rem 0.8rem 0 0.8rem;
+}
+
+.user-info div:first-child
+{
+    border-bottom: 1px solid #a3a3a3; 
+}
+
+.download-img>img
+{
+    width: 20px;
+    vertical-align: middle;
+}
+
+.download-app
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.download
+{
+    opacity: 0.5;
+    font-size: 0.8rem;
+}
+
+.download:hover
+{
+    opacity: 1;
+}
+
+.user
+{
+    padding-top: 0.5rem;
+}
+
+.user-icon>img
+{
+    background-color: #a3a3a3;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.user-name
+{
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
 /* main content */
 .main-content
 {
-    width: calc( 100% - 250px );
-    overflow-y: hidden;
+    width: calc( 100% - 200px );
+    overflow-y: auto;
     padding-top: 100px;
 
     /* test */
@@ -107,7 +248,8 @@ a>span
 
 .categories-menu li
 {
-    padding-right: 1rem;
+    padding-right: 15px;
+    padding-bottom: 1.5rem;
     text-transform: uppercase;
 }
 
@@ -115,28 +257,37 @@ a>span
 {
     border-bottom: 2px solid green;
     width: 30px;
-    margin-left: 2.5rem;
+    margin-left: 2rem;
 }
 
 /* recently played */
 .recently-played h2
 {
-    padding: 2rem 0 1.2rem;
+    padding-bottom: 1.2rem;
 }
 
 .recent
 {
     display: flex;
     justify-content: space-between;
-}
+} 
 
 .col
 {
-    width: calc( ( 100% / 6 ) - 10px );
+    width: calc( ( 100% / 6 ) - 10px);
 
     /* test */
     border: 1px solid blue;
 }
+
+.recent .cards
+{
+    margin-bottom: 1.5rem;
+
+    /* test */
+    background-color: lightsteelblue;
+}
+
 
 /* FOOTER */
 footer
@@ -159,7 +310,7 @@ footer
     position: fixed;
     top: 0;
     right: 0;
-    width: calc( 100% - 250px );
+    width: calc( 100% - 200px );
     background-color: rgba(0, 0, 0, 0.5);
     font-size: 0.8rem;
     height: 80px;
@@ -182,14 +333,96 @@ footer
 
 @media screen and (max-width: 1100px) 
 {
-    /* recently played */
-    .recent
+    /* categories */
+    .categories-menu
     {
         flex-wrap: wrap;
     }
 
+    .categories-menu li
+    {
+        padding-right: 40px;
+    }
+
+    
+    /* recently played */
+    .recent
+    {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+
     .col
     {
-        width: calc( ( 100% / 4 ) - 10px );
+        width: calc( 100% / 4 );
+        padding: 0 1rem;
+    }
+
+   
+}
+
+/******* 
+ SMALL
+*******/
+@media screen and (max-width:700px) 
+{
+    /* recently played */
+    .col
+    {
+        width: 50%;
+    }
+}
+
+/************* 
+ EXTRA SMALL
+*************/
+@media screen and (max-width:600px) 
+{
+    /* left nav */
+    .left-nav
+    {
+        width: 60px;
+    }
+
+    #xs 
+    {
+        display: block;
+    }
+
+    #normal
+    {
+        display: none;
+    }
+
+    .nav-links .logo img
+    {
+        width: 2.5rem;
+        padding-bottom: 0;
+    }
+
+    .home
+    {
+        border-left: none;
+    }
+
+    /* user info */
+    .user-info div:first-child
+    {
+        border-bottom: none; 
+    }
+
+
+    /* main content */
+    .main-content
+    {
+        width: calc( 100% - 60px );
+    }
+
+    /* UPGRADE BANNER */
+    #upgrade-banner
+    {
+        width: calc( 100% - 60px );
     }
 }
